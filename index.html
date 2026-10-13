@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <!--
   Isaac Familoni – Professional Portfolio
-  Version: 1.1.0
+  Version: 1.2.0
   Released: 13 October 2026
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Isaac Familoni | Project Management</title>
+  <title>Isaac Familoni | Project Management | Finance</title>
   <meta name="description" content="Isaac Familoni – Project Management Professional with a working foundation in finance. Structured delivery, risk management, and analytical discipline.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +18,12 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#home" class="nav-logo">Isaac Familoni</a>
+      <a href="#home" class="nav-brand">
+        <img src="profile.jpg" alt="" class="nav-avatar" width="36" height="36">
+        <span class="nav-name">Isaac Familoni</span>
+      </a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -46,8 +49,10 @@
           <a href="#contact" class="btn btn-secondary">Get in Touch</a>
         </div>
       </div>
-      <div class="hero-photo">
-        <img src="profile.jpg" alt="Isaac Familoni" width="320" height="320">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-frame">
+          <img src="profile.jpg" alt="Isaac Familoni" width="340" height="340">
+        </div>
       </div>
     </div>
   </header>
@@ -130,7 +135,6 @@
 
       </div>
 
-      <!-- Education inside Experience flow for cleanliness -->
       <div class="education-block">
         <h3 class="sub-title">Education</h3>
         <div class="education-item">
@@ -333,11 +337,12 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Isaac Familoni · v1.1.0</p>
+      <p>© 2026 Isaac Familoni</p>
     </div>
   </footer>
 
   <script>
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -347,6 +352,21 @@
         }
       });
     });
+
+    // Show nav avatar after scroll
+    const nav = document.getElementById('nav');
+    const scrollThreshold = 120;
+
+    function updateNav() {
+      if (window.scrollY > scrollThreshold) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
   </script>
 </body>
 </html>
