@@ -1,7 +1,7 @@
 /* ============================================
    Isaac Familoni – Professional Portfolio
    McKinsey-inspired clean design system
-   Version: 1.0.0 | Released: 13 October 2026
+   Version: 1.1.0 | Released: 13 October 2026
    ============================================ */
 
 :root {
@@ -485,3 +485,170 @@ a.contact-item:hover {
     padding-top: var(--space-xl);
   }
 }
+
+/* ============================================
+   v1.1.0 – Experience, Skills, Education
+   ============================================ */
+
+/* Timeline / Experience */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-item:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.timeline-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.timeline-location {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.timeline-content h3 {
+  margin-bottom: 0.25rem;
+}
+
+.timeline-role {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-content li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.95rem;
+  color: var(--slate);
+  line-height: 1.55;
+}
+
+.timeline-content li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  background: var(--navy);
+  border-radius: 50%;
+}
+
+/* Education block */
+.education-block {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.sub-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
+  color: var(--navy);
+}
+
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.education-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.education-main strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.education-main span {
+  font-size: 0.95rem;
+  color: var(--slate);
+}
+
+.education-date {
+  font-size: 0.9rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.skill-group h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.skill-group ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-group li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-group li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 700px) {
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .timeline-meta {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
