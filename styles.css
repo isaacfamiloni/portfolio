@@ -1,7 +1,7 @@
 /* ============================================
    Isaac Familoni – Professional Portfolio
    McKinsey-inspired clean design system
-   Version: 2.0.0 | Released: 13 October 2026
+   Version: 2.1.0 | Released: 13 October 2026
    ============================================ */
 
 :root {
@@ -508,6 +508,7 @@ p {
 .hero-photo-wrap {
   justify-self: end;
   position: relative;
+  padding-bottom: 2.5rem;
 }
 
 .hero-photo-frame {
@@ -541,7 +542,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 18%;
   border-radius: 2px;
   position: relative;
   z-index: 1;
@@ -552,10 +553,11 @@ p {
 .status-card {
   position: absolute;
   z-index: 2;
-  left: -56px;
-  bottom: -34px;
-  min-width: 250px;
-  padding: 1rem 1.25rem;
+  left: 0;
+  bottom: -28px;
+  min-width: 220px;
+  max-width: 100%;
+  padding: 0.9rem 1.15rem;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -1144,26 +1146,14 @@ p {
 .cred-hero {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
-  padding: 2rem;
+  padding: 1.75rem 2rem;
   color: #fff;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
   border-radius: var(--radius);
 }
 
 .cred-mark {
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  width: 84px;
-  height: 84px;
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--brass-light);
-  border: 1px solid rgba(201, 166, 107, 0.55);
-  border-radius: 50%;
+  display: none;
 }
 
 .cred-hero .cred-org {
