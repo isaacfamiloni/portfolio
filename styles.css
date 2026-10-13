@@ -1451,22 +1451,34 @@ a.contact-value:hover {
   .hero-photo-wrap {
     justify-self: center;
     order: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 0;
   }
 
   .hero-photo-frame {
     width: 240px;
     height: 240px;
+    margin: 0 auto;
+  }
+
+  /* Decorative offset can pull the photo optically off-centre on mobile */
+  .hero-photo-frame::after {
+    display: none;
   }
 
   .status-card {
     position: relative;
     left: auto;
     bottom: auto;
-    margin: 2.25rem auto 0;
+    margin: 1.5rem auto 0;
     min-width: 0;
-    width: 100%;
-    max-width: 300px;
+    width: 240px;
+    max-width: 240px;
     text-align: left;
+    box-sizing: border-box;
   }
 
   .hero-summary {
@@ -1614,8 +1626,12 @@ a.contact-value:hover {
   }
 
   .hero-photo-frame::after {
-    bottom: -12px;
-    right: -12px;
+    display: none;
+  }
+
+  .status-card {
+    width: 200px;
+    max-width: 200px;
   }
 
   .hero-actions .btn {
