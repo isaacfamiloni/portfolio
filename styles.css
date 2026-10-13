@@ -1475,10 +1475,20 @@ a.contact-value:hover {
     bottom: auto;
     margin: 1.5rem auto 0;
     min-width: 0;
-    width: 240px;
-    max-width: 240px;
+    width: min(100%, 280px);
+    max-width: 280px;
     text-align: left;
     box-sizing: border-box;
+  }
+
+  .status-row {
+    gap: 0.75rem;
+  }
+
+  .status-row dd {
+    text-align: right;
+    white-space: normal;
+    line-height: 1.35;
   }
 
   .hero-summary {
@@ -1630,8 +1640,8 @@ a.contact-value:hover {
   }
 
   .status-card {
-    width: 200px;
-    max-width: 200px;
+    width: min(100%, 280px);
+    max-width: 280px;
   }
 
   .hero-actions .btn {
